@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+$color-primary: #ffffff;
+$color-secondary: #17171a;
+$color-accent: #bf303c;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  min-width: 345px;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+
+  h1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: $color-secondary;
+  }
+}
+
+#description {
+  text-align: center;
+}
+
+main {
+  width: 70%;
+  background: $color-secondary;
+  color: $color-primary;
+  font-size: 1.1rem;
+  padding: 0.8rem;
+  border-top: solid 4px $color-accent;
+}
+
+.form-elements,
+.role,
+.recommendation,
+.improvements {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 37rem) {
+  main {
+    max-width: 800px;
+  }
+  .form-elements,
+  .role,
+  .recommendation,
+  .improvements {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+
+  label,
+  .checks-description {
+    flex-basis: 40%;
+    margin-right: 2rem;
+    text-align: right;
+  }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  max-width: 400px;
+  background: $color-secondary;
+  padding: 0.8rem;
+  color: $color-accent;
+  border-bottom: 1px solid $color-accent;
+  font: inherit;
+  font-size: 1.2rem;
+  &:focus {
+    color: $color-accent;
+    outline: none;
+    color: $color-primary;
+  }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+  caret-color: $color-accent;
+  &:focus {
+    color: $color-accent;
+  }
+  &::placeholder {
+    color: $color-accent;
+    opacity: 0.4;
+  }
+  &::-webkit-input-placeholder,
+  &::-moz-placeholder,
+  &:-ms-input-placeholder,
+  &:-moz-placeholder {
+    color: $color-accent;
+    opacity: 0.4;
+  }
+}
+
+select {
+  option {
+    color: $color-accent;
+  }
+}
+
+.form-checks {
+  color: $color-accent;
+  flex: 100%;
+  max-width: 400px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  display: block;
+  width: 80%;
+  max-width: 300px;
+  background: $color-accent;
+  color: $color-primary;
+  padding: 0.8rem 1.3rem;
+  font: inherit;
+  margin: 1rem auto;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background: #c01f2c;
+  }
+}
